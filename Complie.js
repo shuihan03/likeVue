@@ -20,6 +20,7 @@ class Complie{
                 //第一次初始化替换页面值
                 // let newText= child.innerText.replace(`{{${key}}}`,this.vm[key])
                 child.innerText=this.vm[key];
+                
             }
         });
     }
