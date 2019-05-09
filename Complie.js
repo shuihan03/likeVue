@@ -13,6 +13,7 @@ class Complie{
             
             if(/\{\{(.*)\}\}/.test(child.outerHTML)){
                 let key = RegExp.$1.trim()
+                //通过添加观察者指向，然后调用data的get重写方法，将watcher添加到Observer
                 Observer.target= new Watcher(child,key);
                 this.vm[key];
                 Observer.target=null;
@@ -21,6 +22,7 @@ class Complie{
                 // let newText= child.innerText.replace(`{{${key}}}`,this.vm[key])
                 child.innerText=this.vm[key];
                 
+
             }
         });
     }
