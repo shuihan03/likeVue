@@ -5,7 +5,9 @@ class Complie{
     this.dom=  document.querySelector(el);
     
     }
-
+   /**
+    * 初始化加载页面所有节点，将需要更新的节点创建观察者对象，并存储到观察者列表
+    */
     comipleHtml(){
        Array.from(this.dom.children).forEach(child => {
             

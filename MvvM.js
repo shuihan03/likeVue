@@ -8,7 +8,10 @@ class MvvM {
         let compile = new Complie(el, this);
         compile.comipleHtml();
     }
-
+    /**
+     * 重新定义data,通过set实现数据劫持，同时更新关联的dom数据
+     * @param {*} data 
+     */
     defineData(data) {
             Object.keys(data).forEach(item => {
                     let observe = new Observer();
